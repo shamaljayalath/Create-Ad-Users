@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - block:
+      - name: Deleting User "{{ user_name }}"
+        win_domain_user:
+          name: "{{ user_name }}"      
+          state: absent
