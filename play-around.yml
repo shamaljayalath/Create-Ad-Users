@@ -5,16 +5,16 @@
     - block:
       - name: Ensure user bob is present with address information
         win_domain_user:
-          name: test2
-          firstname: test2
-          surname: test2
-          password: B0bP4ssw0rd
-          groups: "Domain Users"
-          groups: "Ansible"
-          city: Brisbane
+          name: "{{ user_name }}"
+          firstname: "{{ first_name }}"
+          surname: "{{ surname }}"
+          password: "{{ pass }}"
+          groups: "{{ group1 }}"
+          groups: "{{ group2 }}"
+          city: "{{ city }}"
           enable: true
           state: present
-          distinguished_name: CN=test2,ou=Users,dc=rhipe,dc=com
+#          distinguished_name: CN=test2,ou=Users,dc=rhipe,dc=com
           domain_username: RHIPE\Administrator
           domain_password: RedHat1!
           domain_server: ad.rhipe.com
