@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
     - block:
-      - name: Ensure user bob is present with address information
+      - name: Ensure user "{{ user_name }}" is present with address information
         win_domain_user:
           name: "{{ user_name }}"
           firstname: "{{ first_name }}"
