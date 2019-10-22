@@ -1,0 +1,17 @@
+ansible_connection: vmware_tools
+
+ansible_vmware_host: vcenter.rhipe.com
+ansible_vmware_user: administrator@vsphere.local
+ansible_vmware_password: X?5?LDv+
+ansible_vmware_validate_certs: no  # default is yes
+
+# vCenter Connection VM Path Example
+ansible_vmware_guest_path: DATACENTER/vm/FOLDER/{{ inventory_hostname }}
+# ESXi Connection VM Path Example
+ansible_vmware_guest_path: ha-datacenter/vm/{{ inventory_hostname }}
+
+ansible_vmware_tools_user: root
+ansible_vmware_tools_password: MyR00tPassw0rD
+
+# if the target VM guest is Windows set the 'ansible_shell_type' to 'powershell'
+ansible_shell_type: powershell
