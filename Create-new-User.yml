@@ -1,5 +1,5 @@
 ---
-- hosts: ad
+- hosts: all
   gather_facts: no
   tasks:
     - block:
