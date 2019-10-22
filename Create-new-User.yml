@@ -1,6 +1,8 @@
 ---
 - hosts: all
   gather_facts: no
+  vars_files:
+    - vcenter_vars.yml
   tasks:
     - block:
       - name: Ensure user bob is present with address information
